@@ -20,22 +20,28 @@ public class Main {
 
         // Generando el ArrayList con los puntos
 
-        ArrayList<Punto> puntos = new ArrayList();
-        puntos.add(pt1);
-        puntos.add(pt2);
-        puntos.add(pt3);
-        puntos.add(pt4);
-        puntos.add(pt5);
-        puntos.add(pt6);
-        puntos.add(pt7);
+        ArrayList<Punto> ptoscuadrado = new ArrayList();
+        ptoscuadrado.add(pt1);
+        ptoscuadrado.add(pt2);
+        ptoscuadrado.add(pt3);
+        ptoscuadrado.add(pt4);
+
+        ArrayList<Punto> ptostriangulo = new ArrayList();
+        ptostriangulo.add(pt5);
+        ptostriangulo.add(pt6);
+        ptostriangulo.add(pt7);
+
+        Poligono cuadrado = new Poligono(ptoscuadrado);
+
+        Poligono triangulo = new Poligono(ptostriangulo);
 
 
-        System.out.println("El cuadrado esta formado por los siguientes puntos en el plano cartesiano: "+"\nPunto 1: "+"("+pt1.X+","+pt1.Y+")"
-                +"\nPunto 2: "+"("+pt2.X+","+pt2.Y+")"+"\nPunto 3: "+"("+pt3.X+","+pt3.Y+")"+"\nPunto 4: "+"("+pt4.X+","+pt4.Y+")");
+        System.out.println("El cuadrado esta formado por los siguientes puntos en el plano cartesiano: "+"\nPunto 1: "+"("+cuadrado.puntos.get(0).X+","+cuadrado.puntos.get(0).Y+")"
+                +"\nPunto 2: "+"("+cuadrado.puntos.get(1).X+","+cuadrado.puntos.get(1).Y+")"+"\nPunto 3: "+"("+cuadrado.puntos.get(2).X+","+cuadrado.puntos.get(2).X+")"+"\nPunto 4: "+"("+cuadrado.puntos.get(3).X+","+cuadrado.puntos.get(3).Y+")");
 
 
-        System.out.println("\nEl triángulo esta formado por los siguientes puntos en el plano cartesiano: "+"\nPunto 5: "+"("+pt5.X+","+pt5.Y+")"
-                +"\nPunto 6: "+"("+pt6.X+","+pt6.Y+")"+"\nPunto 7: "+"("+pt7.X+","+pt7.Y+")");
+        System.out.println("\nEl triángulo esta formado por los siguientes puntos en el plano cartesiano: "+"\nPunto 5: "+"("+triangulo.puntos.get(0).X+","+triangulo.puntos.get(0).Y+")"
+                +"\nPunto 6: "+"("+triangulo.puntos.get(1).X+","+triangulo.puntos.get(1).Y+")"+"\nPunto 7: "+"("+triangulo.puntos.get(2).X+","+triangulo.puntos.get(2).Y+")");
 
 
     }
